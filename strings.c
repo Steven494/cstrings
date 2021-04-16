@@ -5,17 +5,14 @@ int main(void)
     char input;
     int i = 0;
 
-    printf("Please enter a sentence\n");
+    printf("Please enter a sentence:");
 
-    while (1)
+    while ((input = getchar()) != '\n')
     {
-        input = getchar();
-        if (input = '\n')
-        {
-            buffer[i] = '\0';
-            break;
-        }
         buffer[i] = input;
         i++;
     }
+    buffer[i] = '\0';
+    printf("You entered: %s\n", buffer);
+    return 0;
 }
