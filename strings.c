@@ -1,10 +1,14 @@
 #include<stdio.h>
-int main(void)
+int main(int argc, char *argv[])
 {
     char buffer[256];
     char input;
     int i = 0;
-
+    printf("Number of arguments: %d\n", argc);
+    for (int j = 0; j < argc; j++)
+    {
+        printf("Argument %d: %s\n", j, argv[j]);
+    }
     printf("Please enter a sentence:");
 
     while ((input = getchar()) != '\n')
